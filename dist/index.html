@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>nikita krytoy</title>
+
+	<style>body {
+			overscroll-behavior: none;
+		}
+		* {
+			margin: 0;
+			padding: 0;
+		}
+		#container {
+			width: 100%;
+			height: 100vh;
+		}
+		canvas {
+			display: block;
+		}
+		.wrapper {
+			width: 100%;
+			position: fixed;
+			top: 0;
+			left: 0;
+			/* overflow: auto; */
+			margin-top: 20vh;
+			height: 60vh;
+	 
+			display: grid;
+			grid-gap: 0 10vh;
+			grid-template-rows: repeat(3, 20vh);
+			grid-template-columns: repeat(auto-fill, 20vh);
+			grid-auto-flow: column;
+
+		}
+		.d {
+			border: 4px solid #000;
+			width: 20vh;
+			height: calc(20vh + 4px) ;
+			box-sizing: border-box;
+			grid-column-start: var(--position);
+			grid-row-start: var(--vpos);
+			background-color: purple;
+		}
+		.border {
+			height: 4px;
+			width: 100%;
+			background-color: #000;
+			position: absolute;
+			left: 0;
+			margin-top: -2px;
+		}
+		.border:nth-child(1) {
+			top: 20vh;
+		}
+		.border:nth-child(2) {
+			top: 40vh;
+		}
+
+		.border:nth-child(3) {
+			top: 60vh;
+		}
+		.border:nth-child(4) {
+			top: 80vh;
+		}</style>
+
+</head>
+<body>
+
+	<div class="wrapper" id="wrapper">
+		<div class="d" style="--position:1;--vpos:1"></div>
+		<div class="d" style="--position:2;--vpos:2"></div>
+		<div class="d" style="--position:3;--vpos:3"></div>
+		<div class="d" style="--position:4;--vpos:1"></div>
+		<div class="d" style="--position:5;--vpos:2"></div>
+		<div class="d" style="--position:6;--vpos:3"></div>
+		<div class="d" style="--position:7;--vpos:1"></div>
+		<div class="d" style="--position:8;--vpos:2"></div>
+		<div class="d" style="--position:9;--vpos:3"></div>
+		<div class="d" style="--position:10;--vpos:1"></div>
+	</div>
+
+	<div id="container">
+		<div class="border"></div>
+		<div class="border"></div>
+		<div class="border"></div>
+
+	</div>
+
+ 
+
+	<script src="/main.1f19ae8e.js"></script>
+
+</body>
+</html>
